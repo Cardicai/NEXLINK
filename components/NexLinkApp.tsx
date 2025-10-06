@@ -141,14 +141,14 @@ export default function NexLinkApp() {
 
       <Sidebar open={sidebar} onClose={()=>setSidebar(false)} />
 
-      <main className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-12">
-        <aside className="md:col-span-4 border-r border-white/10">
+      <main className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-12 h-[calc(100dvh-64px)] overflow-hidden">
+        <aside className="md:col-span-4 border-r border-white/10 flex flex-col">
           <div className="flex items-center gap-2 px-3 py-3 md:hidden">
             <Search className="h-4 w-4 text-white/50" />
             <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search"
               className="h-9 flex-1 rounded-full border border-white/10 bg-space-panel px-3 text-sm outline-none placeholder:text-white/40" />
           </div>
-          <div className="max-h-[calc(100dvh-64px)] overflow-y-auto">
+          <div className="flex-1 overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+24px)]">
             {chats.map(c => (
               <button key={c.id} onClick={()=>setActive(c.id)}
                 className={`flex w-full items-center gap-3 px-3 py-3 text-left transition ${active===c.id ? 'bg-white/5' : 'hover:bg-white/5'}`}>
@@ -259,7 +259,7 @@ export default function NexLinkApp() {
         )}
       </AnimatePresence>
 
-      <footer className="border-t border-white/10 bg-space-panel2/80 py-3 text-center text-[11px] text-white/60">
+      <footer className="hidden md:block border-t border-white/10 bg-space-panel2/80 py-3 text-center text-[11px] text-white/60">
         © {new Date().getFullYear()} Cardic Nexus • Nex Link — Cosmic Gold
       </footer>
     </div>

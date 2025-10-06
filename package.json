@@ -1,4 +1,3 @@
-
 {
   "name": "nex-link-starter",
   "version": "0.1.0",
@@ -11,20 +10,21 @@
     "postinstall": "tailwindcss -v >/dev/null 2>&1 || echo 'Install tailwindcss globally if needed'"
   },
   "dependencies": {
+    "@supabase/supabase-js": "2.45.4",
     "framer-motion": "11.2.6",
     "lucide-react": "0.446.0",
     "next": "14.2.5",
     "next-auth": "4.24.7",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "@supabase/supabase-js": "2.45.4"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@types/react": "19.2.0",
     "autoprefixer": "10.4.19",
+    "eslint": "9.9.0",
+    "eslint-config-next": "14.2.5",
     "postcss": "8.4.41",
     "tailwindcss": "3.4.10",
-    "typescript": "5.4.5",
-    "eslint": "9.9.0",
-    "eslint-config-next": "14.2.5"
+    "typescript": "5.4.5"
   }
 }
