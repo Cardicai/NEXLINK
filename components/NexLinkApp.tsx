@@ -40,7 +40,7 @@ const Sidebar: React.FC<{open:boolean; onClose:()=>void}> = ({open,onClose}) => 
       {open && (
         <>
           <div onClick={() => setOpen(false)} className="fixed inset-0 z-40 bg-black/50" />
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
